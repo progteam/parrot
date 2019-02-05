@@ -1,0 +1,13 @@
+# Virtual environment
+/penv
+
+# Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# A sqlite3 database for regression tests
+/regress.db
+
+# Jetbrains IDEs
+/.idea
