@@ -1,0 +1,25 @@
+language: python
+matrix:
+  include:
+  - name: Test Frontend
+    language: node_js
+    node_js: '10'
+    cache:
+      directories:
+      - frontend/node_modules
+    install:
+    - npm install -C frontend
+    script:
+    - npm run build -C frontend
+    - npm test  -C frontend
+  - name: Test Backend
+    language: python
+    python: '3.6'
+    install:
+    - pip install -r requirements.txt
+    script:
+    - python manage.py test
+notifications:
+  slack:
+    secure: fXAOH6B3MHG8IGJ/9viB8rGgs3p6DFprTgYhA/oGcATHxScPBWQe220xba07obRstFY3vOORHapr3vILY101vckvURyW5DzIAb4wDKNtQ6g1HGc3An8WjbMN9NFfh/KCRd92wiEwPoNS+XcJcdHZxc9pNIeiC82LxqC5ELAWdR/g8sLbQIsfxnm4ag+eqiWlUaEcD41jsWE1yunMrKQjZu23cM9wxv+Ae7D6UtqnVAJ5ASiU8NTl4vF16ctoykoMByAb9ntNxc7NFfupeILWbtCLvLtjc5sDP1hEZnoocKJ2HEkhIc6i2vlhVZIAzBSQQEdltNfWoXiyI+mMfaGV4eAE4GrcfYYjSLl6PNT9Q9IfqTWOdK/NeDzzNf0+pdOtxbwxJqJnI06OG5m3Vn44I/+PYf4OMZH5ZmV/jewmtSgvAL0CKjncTDwlh3LIDvDeJ4k9Eb9FoYSlNBvWPXWrAa2owZuzqpcV5ds4PeLZ1uOwqryWBtcUfjlJ7Rrs/19dBzFJJQoOA4Nbu8k9Fy7mixnJ+BI7gfMd2Pt/KxOSsyT+jyFvHMA9bYMw0yAWlLGpOewCQHBVBx0WOSKNB3iymLWbSe1fDCPnXHL+0vPH4Wqd1A10WnYb1RxlH5B+K1NZFTATjmifdg0enP3eLSM46oIj5j6hzOmrGUFMlBQDjIU=
+    on_success: change

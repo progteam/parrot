@@ -1,4 +1,5 @@
 Parrot
+[![Build Status](https://travis-ci.com/progteam/parrot.svg?branch=master)](https://travis-ci.com/progteam/parrot)
 ======
 Parrot is an open source web project for the Monterey Bay Programming Team
 (MBPT, aka progteam). The project is named after the popular #progteam emoji
