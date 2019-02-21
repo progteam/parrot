@@ -118,9 +118,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 if DEBUG:
-    STATIC_URL = '/frontend/public/'
+    # Note the slashes '/.../' are necessary for STATIC_URL
+    STATIC_URL = '/frontend/dist/static/'
+
     STATICFILES_DIRS = [
-        # First locate the built assets
+        # First locate the built assets. When static files with the same names
+        # exist in both directories, the ones from dist will be loaded since
+        # they're compiled assets (e.g. index.html).
         os.path.join(BASE_DIR, 'frontend/dist'),
         os.path.join(BASE_DIR, 'frontend/public'),
     ]

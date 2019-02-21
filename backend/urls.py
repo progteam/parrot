@@ -14,8 +14,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.conf import settings
+from django.urls import path, re_path
+
+from .views import serve_dev_assets
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+
+if settings.DEBUG:
+    # Since we use Django to serve the static assets during development, we add
+    # a fallback view to handle these requests. Note pattern /.*/ matches any
+    # URLs; thus it has to be added at the end of the URL patterns list.
+    urlpatterns.append(re_path(r'.*', serve_dev_assets))
