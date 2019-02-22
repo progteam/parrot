@@ -1,0 +1,11 @@
+@import '../colors';
+
+.logo {
+  width: 50%;
+  max-width: 300px;
+  height: auto;
+
+  path {
+    fill: $logo-color;
+  }
+}
