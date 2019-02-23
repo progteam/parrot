@@ -17,12 +17,18 @@ from django.contrib import admin
 from django.conf import settings
 from django.urls import path, re_path
 
-from .views import serve_dev_assets
+from .views import error404, index, serve_dev_assets
 
 
+# pylint: disable=invalid-name
 urlpatterns = [
+    path('', index),
     path('admin/', admin.site.urls),
 ]
+
+# Set our 404 error handler. Read more at
+#   https://docs.djangoproject.com/en/2.1/ref/views/#error-views
+handler404 = error404
 
 if settings.DEBUG:
     # Since we use Django to serve the static assets during development, we add
