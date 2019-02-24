@@ -1,0 +1,164 @@
+/*
+ * Breakpoints
+ *
+ *  @include breakpoint-all:
+ *    The style will be applied to all settings.
+ *
+ *  @include breakpoint-<bp in $breakpoints>-<down/only/up>
+ *    Apply the style when the window width is in
+ *      down: [0, next(bp))
+ *      only: [bt, next(bp))
+ *      up: [bt, MAX_WIDTH)
+ */
+
+$breakpoints: (
+  'mobile-m': 0px,
+  'mobile-l': 376px,
+  'tablet': 426px,
+  'laptop-m': 769px,
+  'laptop-l': 1025px,
+  'desktop-m': 1440px,
+  'desktop-l': 2560px,
+);
+
+@mixin breakpoint-all {
+  $value: map-get($breakpoints, mobile-m);
+
+  @media (min-width: $value) {
+    @content;
+  }
+}
+
+@mixin breakpoint-mobile-m-only {
+  $min-value: map-get($breakpoints, mobile-m);
+  $max-value: map-get($breakpoints, mobile-l) - 1;
+
+  @media (min-width: $min-value) and (max-width: $max-value) {
+    @content;
+  }
+}
+
+@mixin breakpoint-mobile-l-only {
+  $min-value: map-get($breakpoints, mobile-l);
+  $max-value: map-get($breakpoints, tablet) - 1;
+
+  @media (min-width: $min-value) and (max-width: $max-value) {
+    @content;
+  }
+}
+
+@mixin breakpoint-mobile-l-down {
+  $max-value: map-get($breakpoints, tablet) - 1;
+
+  @media (max-width: $max-value) {
+    @content;
+  }
+}
+
+@mixin breakpoint-mobile-l-up {
+  $min-value: map-get($breakpoints, mobile-l);
+
+  @media (min-width: $min-value) {
+    @content;
+  }
+}
+
+@mixin breakpoint-tablet-only {
+  $min-value: map-get($breakpoints, tablet);
+  $max-value: map-get($breakpoints, laptop-m) - 1;
+
+  @media (min-width: $min-value) and (max-width: $max-value) {
+    @content;
+  }
+}
+
+@mixin breakpoint-tablet-down {
+  $max-value: map-get($breakpoints, laptop-m) - 1;
+
+  @media (max-width: $max-value) {
+    @content;
+  }
+}
+
+@mixin breakpoint-tablet-up {
+  $min-value: map-get($breakpoints, tablet);
+
+  @media (min-width: $min-value) {
+    @content;
+  }
+}
+
+@mixin breakpoint-laptop-m-only {
+  $min-value: map-get($breakpoints, laptop-m);
+  $max-value: map-get($breakpoints, laptop-l) - 1;
+
+  @media (min-width: $min-value) and (max-width: $max-value) {
+    @content;
+  }
+}
+
+@mixin breakpoint-laptop-m-down {
+  $max-value: map-get($breakpoints, laptop-l) - 1;
+
+  @media (max-width: $max-value) {
+    @content;
+  }
+}
+
+@mixin breakpoint-laptop-m-up {
+  $min-value: map-get($breakpoints, laptop-m);
+
+  @media (min-width: $min-value) {
+    @content;
+  }
+}
+
+@mixin breakpoint-laptop-l-only {
+  $min-value: map-get($breakpoints, laptop-l);
+  $max-value: map-get($breakpoints, desktop-m) - 1;
+
+  @media (min-width: $min-value) and (max-width: $max-value) {
+    @content;
+  }
+}
+
+@mixin breakpoint-laptop-l-down {
+  $max-value: map-get($breakpoints, desktop-m) - 1;
+
+  @media (max-width: $max-value) {
+    @content;
+  }
+}
+
+@mixin breakpoint-laptop-l-up {
+  $min-value: map-get($breakpoints, laptop-l);
+
+  @media (min-width: $min-value) {
+    @content;
+  }
+}
+
+@mixin breakpoint-desktop-m-only {
+  $min-value: map-get($breakpoints, desktop-m);
+  $max-value: map-get($breakpoints, desktop-l) - 1;
+
+  @media (min-width: $min-value) and (max-width: $max-value) {
+    @content;
+  }
+}
+
+@mixin breakpoint-desktop-m-down {
+  $max-value: map-get($breakpoints, desktop-l) - 1;
+
+  @media (max-width: $max-value) {
+    @content;
+  }
+}
+
+@mixin breakpoint-desktop-m-up {
+  $min-value: map-get($breakpoints, desktop-m);
+
+  @media (min-width: $min-value) {
+    @content;
+  }
+}
