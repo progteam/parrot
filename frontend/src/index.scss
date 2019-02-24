@@ -1,4 +1,19 @@
-body {
+/* CSS Reset */
+
+html {
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+a:hover, a:visited, a:link, a:active {
+  text-decoration: none;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   /* Default Font Fallback Stacks */
   font-family:
     -apple-system,
@@ -10,4 +25,6 @@ body {
     Cantarell,
     Helvetica Neue,
     sans-serif;
+  margin: 0;
+  padding: 0;
 }

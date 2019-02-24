@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import './index.scss';
 import LandingPage from './landing/landing'
+
+import './index.scss';
 
 class App extends React.Component {
   render() {
