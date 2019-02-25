@@ -25,7 +25,7 @@ SECRET_KEY = '#6zwu&dq_5z5s6nkgzwb1nc40863jq4znvx5j)#%+sns_@7&1u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('PARROT_ENV', 'development')  != 'production'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]']
 
 
 # Application definition
@@ -47,6 +47,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # We use WhiteNoise to serve static files (index.html) using gunicorn
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'backend.urls'
@@ -129,4 +131,11 @@ if DEBUG:
         os.path.join(BASE_DIR, 'frontend/public'),
     ]
 else:
-    STATIC_URL = os.environ['PARROT_CDN_URL']
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+    # http://whitenoise.evans.io/en/stable/django.html
+    # Serve index.html when visit /
+    WHITENOISE_INDEX_FILE = True
+
+    # Allow the app being hosted on PARROT_HOST to prevent Host Header Attack
+    ALLOWED_HOSTS.append(os.environ['PARROT_HOST'])
