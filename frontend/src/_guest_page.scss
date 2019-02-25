@@ -1,0 +1,20 @@
+$guest-page-min-width: 200px;
+
+%guest-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: $guest-page-min-width;
+
+  .main {
+    flex: 1 100%;
+    /* Another flex box to align its children vertically */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    p {
+      width: 100%;
+    }
+  }
+}

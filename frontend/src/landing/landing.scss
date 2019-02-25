@@ -1,0 +1,29 @@
+@import '../guest_page';
+@import '../breakpoints';
+
+$landing-msg-font-size: 54px;
+
+.landing {
+  @extend %guest-page;
+
+  .main {
+    p {
+      /* Adjust margin-bottom to center the message vertically */
+      font-size: $landing-msg-font-size;
+      margin-bottom: $landing-msg-font-size;
+      text-align: center;
+      width: 100%;
+
+      @include breakpoint-mobile-m-only {
+        $landing-msg-font-size: 25px;
+        font-size: $landing-msg-font-size;
+        margin-bottom: $landing-msg-font-size;
+      }
+
+      strong {
+        display: block;
+        background: #CCCCCC;
+      }
+    }
+  }
+}
