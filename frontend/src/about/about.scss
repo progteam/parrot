@@ -1,0 +1,38 @@
+@import '../breakpoints';
+@import '../colors';
+@import '../guest_page';
+
+.about {
+  @extend %guest-page;
+
+  .main {
+    @include breakpoint-mobile-m-only {
+      flex-direction: column;
+    }
+
+    align-items: stretch;
+
+    p {
+      $margin-size: 5vw;
+      margin-left: $margin-size;
+      margin-right: $margin-size;
+    }
+
+    .left-panel {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .right-panel {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+}
