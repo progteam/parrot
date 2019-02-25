@@ -1,0 +1,41 @@
+@import '../breakpoints';
+
+.officers {
+  $tab-size: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 5vh;
+
+  .officer {
+    margin-bottom: 10px;
+    text-align: center;
+    width: 50%;
+
+    .profile-img {
+      border-radius: 50%;
+      max-height: 80px;
+      max-width: 80px;
+      object-fit: cover;
+    }
+
+    .name {
+      font-size: 10px;
+
+      div {
+        display: inline;
+      }
+
+      .first-name {
+        margin-right: $tab-size;
+      }
+    }
+
+    .role {
+      font-size: 12px;
+    }
+
+    .email {
+      font-size: 6px;
+    }
+  }
+}
