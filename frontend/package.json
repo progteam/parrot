@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "eslint-config-airbnb": "^17.1.0",
     "node-sass": "^4.11.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
@@ -10,6 +11,7 @@
     "react-svg": "^7.2.7"
   },
   "scripts": {
+    "lint": "eslint \"./**/*.js\"",
     "start": "react-scripts start",
     "watch": "node watch.js",
     "build": "PUBLIC_URL=$PARROT_CDN_HOST react-scripts build",
