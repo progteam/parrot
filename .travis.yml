@@ -17,8 +17,22 @@ matrix:
   - name: Test Backend
     language: python
     python: '3.6'
+    services:
+    - postgresql
     install:
     - pip install -r requirements.txt
+    before_script:
+    - |
+      # Avoid using production environment on pull requests
+      #   https://docs.travis-ci.com/user/pull-requests/#pull-requests-and-security-restrictions
+      if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then
+        export PARROT_ENV='production'
+        # Create the db user and give it permissions
+        #   PARROT_* env vars are pre-set on Travis
+        psql -c "CREATE DATABASE $PARROT_DB_NAME;" -U postgres
+        psql -c "CREATE USER $PARROT_DB_USER WITH PASSWORD '$PARROT_DB_PASSWORD';" -U postgres
+        psql -c "ALTER USER $PARROT_DB_USER CREATEDB;" -U postgres
+      fi
     script:
     # Create DB migrations before running the tests
     - |
