@@ -1,3 +1,9 @@
+"""
+backend/views.py
+
+Backend common views. Read more at
+    https://docs.djangoproject.com/en/2.1/ref/views/
+"""
 from django.contrib.staticfiles.views import serve
 
 
