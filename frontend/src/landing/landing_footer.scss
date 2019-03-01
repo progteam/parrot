@@ -2,18 +2,18 @@
 @import '../colors';
 
 .landing-footer {
+  background-color: $backgroud-color-light;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: $backgroud-color-light;
 
   a {
-    font-size: 14px;
-    color: $primary-color;
-    margin: 10px;
-
     @include breakpoint-tablet-down {
       font-size: 12px;
     }
+
+    color: $primary-color;
+    font-size: 14px;
+    margin: 10px;
   }
 }
