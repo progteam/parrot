@@ -7,11 +7,11 @@ $guest-page-min-width: 200px;
   min-width: $guest-page-min-width;
 
   .main {
-    flex: 1 100%;
-    /* Another flex box to align its children vertically */
-    display: flex;
-    flex-direction: row;
+    // Another flex box to align its children vertically
     align-items: center;
+    display: flex;
+    flex: 1 100%;
+    flex-direction: row;
 
     p {
       width: 100%;

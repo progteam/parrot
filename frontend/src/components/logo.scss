@@ -1,10 +1,10 @@
 @import '../colors';
 
 .logo {
+  height: auto;
+  max-width: 300px;
   min-width: 150px;
   width: 50%;
-  max-width: 300px;
-  height: auto;
 
   path {
     fill: $logo-color;
