@@ -79,6 +79,13 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'regress.db'),
+    } if DEBUG else {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ['PARROT_DB_NAME'],
+        'USER': os.environ['PARROT_DB_USER'],
+        'PASSWORD': os.environ['PARROT_DB_PASSWORD'],
+        'HOST': os.environ['PARROT_DB_HOST'],
+        'PORT': os.environ['PARROT_DB_PORT'],
     }
 }
 
