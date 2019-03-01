@@ -8,10 +8,11 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.3",
-    "react-svg": "^7.2.7"
+    "react-svg": "^7.2.7",
+    "sass-lint": "^1.12.1"
   },
   "scripts": {
-    "lint": "eslint \"./**/*.js\"",
+    "lint": "eslint \"./**/*.js\" && sass-lint \"./**/*.scss\" -v -q",
     "start": "react-scripts start",
     "watch": "node watch.js",
     "build": "PUBLIC_URL=$PARROT_CDN_HOST react-scripts build",
