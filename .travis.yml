@@ -18,7 +18,11 @@ matrix:
     install:
     - pip install -r requirements.txt
     script:
-    - python manage.py test
+    # Create DB migrations before running the tests
+    - |
+      python manage.py migrate
+      python manage.py test
+      pylint --load-plugins pylint_django **/*.py
 notifications:
   slack:
     # Notify the #parrot channel when a build failed or has been fixed. The
