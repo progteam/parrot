@@ -10,8 +10,10 @@ matrix:
     install:
     - npm install -C frontend
     script:
-    - npm run build -C frontend
-    - npm test  -C frontend
+    - |
+      npm run build -C frontend
+      npm test -C frontend
+      npm run lint -C frontend
   - name: Test Backend
     language: python
     python: '3.6'
