@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '#6zwu&dq_5z5s6nkgzwb1nc40863jq4znvx5j)#%+sns_@7&1u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('PARROT_ENV', 'development')  != 'production'
+DEBUG = os.environ.get('PARROT_ENV', 'development') != 'production'
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]']
 
