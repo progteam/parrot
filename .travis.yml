@@ -12,8 +12,7 @@ matrix:
     script:
     - |
       npm run build -C frontend
-      npm test -C frontend
-      npm run lint -C frontend
+      ./scripts/test_frontend.sh
   - name: Test Backend
     language: python
     python: '3.6'
@@ -34,11 +33,7 @@ matrix:
         psql -c "ALTER USER $PARROT_DB_USER CREATEDB;" -U postgres
       fi
     script:
-    # Create DB migrations before running the tests
-    - |
-      python manage.py migrate
-      python manage.py test
-      pylint --load-plugins pylint_django **/*.py
+    - ./scripts/test_backend.sh
 notifications:
   slack:
     # Notify the #parrot channel when a build failed or has been fixed. The
