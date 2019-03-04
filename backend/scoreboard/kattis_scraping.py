@@ -7,13 +7,19 @@ import requests
 from bs4 import BeautifulSoup
 
 
-class Error404(Exception):
+class ScrapingError(Exception):
+    """
+    An error occurred during scraping
+    """
+
+
+class Error404(ScrapingError):
     """
     Kattis profile with passed user handle does not exist
     """
 
 
-class ErrorInvalid(Exception):
+class ErrorInvalid(ScrapingError):
     """
     Profile with matching user handle is not of CSUMB student
     """
