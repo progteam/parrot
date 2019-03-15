@@ -1,0 +1,31 @@
+@import '../breakpoints';
+@import '../colors';
+
+.meetings {
+  h3 {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .meeting {
+    font-size: 11px;
+    margin-top: 1.5vh;
+    text-align: center;
+    width: 100%;
+
+    div {
+      display: inline;
+    }
+
+    $tab-size: 10px;
+
+    .day-of-week {
+      padding-right: $tab-size;
+      text-transform: capitalize;
+    }
+
+    .time-end {
+      padding-right: $tab-size;
+    }
+  }
+}

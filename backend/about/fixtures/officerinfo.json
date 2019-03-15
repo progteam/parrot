@@ -1,0 +1,54 @@
+[
+{
+  "model": "about.officerinfo",
+  "pk": 1,
+  "fields": {
+    "email": "rbeck@csumb.edu",
+    "name": "Ryan Beck",
+    "profile_img": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+    "role": "President",
+    "term": "SPR 19",
+    "created_at": "2019-03-06T23:54:32.623Z",
+    "updated_at": "2019-03-06T23:54:32.623Z"
+  }
+},
+{
+  "model": "about.officerinfo",
+  "pk": 2,
+  "fields": {
+    "email": "fcaudillo@csumb.edu",
+    "name": "Fernando Caudillo",
+    "profile_img": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+    "role": "Vise President",
+    "term": "SPR 19",
+    "created_at": "2019-03-06T23:55:20.958Z",
+    "updated_at": "2019-03-06T23:55:20.958Z"
+  }
+},
+{
+  "model": "about.officerinfo",
+  "pk": 3,
+  "fields": {
+    "email": "swestigard@csumb.edu",
+    "name": "Sam Westigard",
+    "profile_img": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+    "role": "Secretary",
+    "term": "SPR 19",
+    "created_at": "2019-03-06T23:55:54.901Z",
+    "updated_at": "2019-03-06T23:55:54.901Z"
+  }
+},
+{
+  "model": "about.officerinfo",
+  "pk": 4,
+  "fields": {
+    "email": "jfahy@csumb.edu",
+    "name": "Jake Fahy",
+    "profile_img": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+    "role": "Treasurer",
+    "term": "SPR 19",
+    "created_at": "2019-03-06T23:56:22.013Z",
+    "updated_at": "2019-03-06T23:56:22.013Z"
+  }
+}
+]

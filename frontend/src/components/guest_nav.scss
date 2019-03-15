@@ -1,3 +1,43 @@
+@import '../colors';
+@import '../breakpoints';
+
 .guest-nav {
+  @include breakpoint-mobile-m-only {
+    flex-direction: column;
+  }
+
+  display: flex;
+  flex-direction: row;
   padding: 20px;
+  padding-bottom: 0;
+
+  .active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .links {
+    @include breakpoint-mobile-m-only {
+      width: 100%;
+    }
+
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50%;
+
+    a {
+      @include breakpoint-mobile-m-only {
+        font-size: 11px;
+      }
+
+      @include breakpoint-laptop-m-up {
+        font-size: 23px;
+      }
+
+      color: $primary-color;
+      font-size: 3vw;
+    }
+  }
 }
