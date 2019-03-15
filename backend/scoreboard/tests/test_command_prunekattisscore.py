@@ -16,7 +16,7 @@ from backend.scoreboard.models import KattisScore, KattisHandle
 
 
 def create_scores(num_scores, now, delta=timedelta(minutes=1)):
-    """Create fake scores snapshots to prune
+    """Create fake score snapshots to prune
 
     Use an n^2 distribution on the timeline to simulate the real table. Since
     the created_at timestamp is created automatically by Django, we mock the
