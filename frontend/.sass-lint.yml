@@ -1,0 +1,9 @@
+options:
+  formatter: stylish
+files:
+  include:
+    - "./src/**/*.s+(a|c)ss"
+  ignore:
+    - "./src/build/**/s+(a|c)ss"
+    - "./src/dist/**/*.s+(a|c)ss"
+    - "./node_modules/**/*.s+(a|c)ss"

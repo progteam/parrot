@@ -23,7 +23,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '#6zwu&dq_5z5s6nkgzwb1nc40863jq4znvx5j)#%+sns_@7&1u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('PARROT_ENV', 'development')  != 'production'
+ENV = os.environ.get('PARROT_ENV', 'development')
+DEBUG = ENV not in ('production', 'test')
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]']
 
@@ -37,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'backend',
+    'backend.scoreboard',
 ]
 
 MIDDLEWARE = [
@@ -47,7 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # We use WhiteNoise to serve static files (index.html) using gunicorn
+    # We use WhiteNoise to serve static files (the django-admin site)
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
@@ -77,6 +80,13 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ['PARROT_DB_NAME'],
+        'USER': os.environ['PARROT_DB_USER'],
+        'PASSWORD': os.environ['PARROT_DB_PASSWORD'],
+        'HOST': os.environ['PARROT_DB_HOST'],
+        'PORT': os.environ['PARROT_DB_PORT'],
+    } if ENV == 'production' else {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'regress.db'),
     }
@@ -119,23 +129,28 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
+BACKEND_TEMPLATES_DIR = os.path.join(BASE_DIR, 'backend/templates')
+STATICFILES_STORAGE = 'backend.static_files_storage.StaticFilesStorage'
+
 if DEBUG:
     # Note the slashes '/.../' are necessary for STATIC_URL
     STATIC_URL = '/frontend/dist/static/'
-
+    FRONTEND_BUILD_DIR = os.path.join(BASE_DIR, 'frontend/dist')
     STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, 'static'),
         # First locate the built assets. When static files with the same names
         # exist in both directories, the ones from dist will be loaded since
-        # they're compiled assets (e.g. index.html).
+        # they're compiled assets.
         os.path.join(BASE_DIR, 'frontend/dist'),
         os.path.join(BASE_DIR, 'frontend/public'),
     ]
 else:
+    # Note the slashes '/.../' are necessary for STATIC_URL
+    STATIC_URL = '/static/'
+    # WhiteNoise needs STATIC_ROOT to serve the static files. Read more at
+    #   http://whitenoise.evans.io/en/stable/django.html
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
-    # http://whitenoise.evans.io/en/stable/django.html
-    # Serve index.html when visit /
-    WHITENOISE_INDEX_FILE = True
-
-    # Allow the app being hosted on PARROT_HOST to prevent Host Header Attack
-    ALLOWED_HOSTS.append(os.environ['PARROT_HOST'])
+    # Allow the app being hosted on PARROT_HOST to prevent Host Header Attack.
+    # If the environment variable is not set, we are in the test environment,
+    # so we allow the test server to host the app.
+    ALLOWED_HOSTS.append(os.environ.get('PARROT_HOST', 'testserver'))

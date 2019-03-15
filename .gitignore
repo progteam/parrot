@@ -12,9 +12,13 @@ __pycache__/
 # Jetbrains IDEs
 /.idea
 
-# Django static root
-#
-# The static directory is only used in production. When the app starts, we
-# check out the latest index.html from the CDN into this directory
-# (backend/wsgi.py). The other static assets are served from the CDN directly.
+# When the app starts, we check out the latest index.html from the CDN into
+# the backend template dir (in prod) or link the built index file from the
+# frontend build dir (in dev) (See backend/retrieve_index_file.py). When in
+# prod, the static assets are served from the CDN directly. In dev, we add the
+# assets directories into the STATICFILES_DIRS (See backend/settings.py).
+/backend/templates
+
+# Django static root. The directory where we store the collected the static
+# assets (i.e. the django-admin site).
 /static
