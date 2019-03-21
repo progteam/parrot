@@ -1,7 +1,18 @@
+"""
+backend/about/test_views.py
+
+Tests for the about page views. We use the test client. Read more at
+    https://docs.djangoproject.com/en/2.1/topics/testing/tools/
+"""
 import json
 from django.test import TestCase
 
 class AboutPageViewTests(TestCase):
+    """About page view tests for URLs:
+    - /about/meeting-info
+    - /about/officer-info
+    - /about/progteam-desc
+    """
     fixtures = [
         'meetinginfo.json',
         'officerinfo.json',

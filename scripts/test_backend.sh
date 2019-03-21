@@ -15,5 +15,10 @@ echo "Testing backend using $PARROT_ENV environment..."
 python manage.py migrate && \
 python manage.py collectstatic --noinput && \
 python manage.py test && \
-# Run linter
-pylint --load-plugins pylint_django **/*.py
+# Run linter and exclude directories: penv, migrations, and node_modules
+find . -type d \( \
+  -name migrations -o \
+  -name node_modules -o \
+  -name penv \
+\) -prune -o -name "*.py" -print \
+| xargs pylint --load-plugins pylint_django
