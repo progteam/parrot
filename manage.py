@@ -1,4 +1,10 @@
 #!/usr/bin/env python
+"""
+A Django’s command-line utility for administrative tasks.
+
+This file is automatically created in each Django project. Read more at
+    https://docs.djangoproject.com/en/2.1/ref/django-admin/
+"""
 import os
 import sys
 

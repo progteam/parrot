@@ -1,14 +1,13 @@
 """
 backend/scoreboard/test/test_command_prunekattisscore.py
 
-Tests for the prunekattisscore command in
-    backend/scoreboard/management/commands/prunekattisscore.py
+Tests for the prunekattisscore command. Read more at
+    https://docs.djangoproject.com/en/2.1/ref/django-admin/#django.core.management.call_command
 """
 from datetime import datetime, timedelta
 from unittest.mock import patch, Mock
 
 from django.core.management import call_command
-from django.db import models
 from django.test import TestCase
 from django.utils.timezone import get_current_timezone
 
@@ -30,6 +29,9 @@ def create_scores(num_scores, now, delta=timedelta(minutes=1)):
 
 
 class PruneKattisScoreTests(TestCase):
+    """Tests for the prunekattisscore command in
+        backend/scoreboard/management/commands/prunekattisscore.py
+    """
     def test_pruning(self):
         """Test the prunekattisscore command
         - it prunes the table and keeps x data points where x in
