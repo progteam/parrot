@@ -1,0 +1,17 @@
+@import '../guest_page';
+@import '../breakpoints';
+
+.scoreboard{
+	@extend %guest-page;
+
+	.main{
+		display: flex;
+		justify-content: space-around;
+		flex-direction: column;
+		
+		.padding-around{
+			width: 100%;
+			height: 5em;
+		}
+	}
+}
