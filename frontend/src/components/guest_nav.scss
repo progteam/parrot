@@ -1,5 +1,6 @@
 @import '../colors';
 @import '../breakpoints';
+@import '../guest_page';
 
 .guest-nav {
   @include breakpoint-mobile-m-only {
@@ -38,6 +39,8 @@
 
       color: $primary-color;
       font-size: 3vw;
+      margin-left: 2vw;
+      margin-right: 2vw;
     }
   }
 }

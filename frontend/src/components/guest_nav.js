@@ -10,6 +10,7 @@ const GuestNav = () => (
     <Logo />
     <div className="links">
       <NavLink to="/about" activeClassName="active">About</NavLink>
+      <NavLink to="/events" activeClassName="active">Events</NavLink>
     </div>
   </div>
 );

@@ -1,0 +1,50 @@
+@import '../breakpoints';
+@import '../colors';
+
+.events-page {
+  display: flex;
+  flex-direction: column;
+
+  .event {
+    @include breakpoint-tablet-down {
+      flex-direction: column;
+    }
+
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .title {
+      font-size: 20px;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .left-panel {
+      @include breakpoint-tablet-down {
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+      }
+
+      font-style: italic;
+      max-width: 620px;
+      padding: 10px;
+      text-align: center;
+      width: 60%;
+    }
+
+    .right-panel {
+      @include breakpoint-tablet-down {
+        width: 100%;
+      }
+
+      padding: 10px;
+      text-align: center;
+      width: 40%;
+    }
+  }
+}
