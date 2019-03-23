@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'backend',
     'backend.about',
+    'backend.events',
     'backend.scoreboard',
 ]
 
