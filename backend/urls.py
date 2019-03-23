@@ -24,6 +24,7 @@ from .views import error404, index, serve_dev_assets
 urlpatterns = [
     path('', index),
     path('about/', include('backend.about.urls')),
+    path('events/', include('backend.events.urls')),
     path('admin/', admin.site.urls),
 ]
 

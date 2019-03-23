@@ -1,0 +1,221 @@
+[
+{
+  "model": "events.team",
+  "pk": 1,
+  "fields": {
+    "division": "1",
+    "event": 1,
+    "name": "Harry Otter and the Deathly Shallows",
+    "rank": 1,
+    "created_at": "2019-03-20T23:24:47.086Z",
+    "updated_at": "2019-03-20T23:24:47.086Z",
+    "members": [
+      1,
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "events.team",
+  "pk": 2,
+  "fields": {
+    "division": "2",
+    "event": 1,
+    "name": "Harry Otter and the Half-Pup Prince",
+    "rank": 1,
+    "created_at": "2019-03-20T23:25:13.825Z",
+    "updated_at": "2019-03-20T23:25:13.826Z",
+    "members": [
+      4,
+      5,
+      6
+    ]
+  }
+},
+{
+  "model": "events.team",
+  "pk": 3,
+  "fields": {
+    "division": "2",
+    "event": 1,
+    "name": "Harry Otter and the Goblet of Fish",
+    "rank": 2,
+    "created_at": "2019-03-20T23:25:32.705Z",
+    "updated_at": "2019-03-20T23:25:32.705Z",
+    "members": [
+      7,
+      8,
+      9
+    ]
+  }
+},
+{
+  "model": "events.team",
+  "pk": 4,
+  "fields": {
+    "division": "2",
+    "event": 1,
+    "name": "Harry Otter and the Order of the Porpoise",
+    "rank": 3,
+    "created_at": "2019-03-20T23:25:49.985Z",
+    "updated_at": "2019-03-20T23:25:49.985Z",
+    "members": [
+      10,
+      11,
+      12
+    ]
+  }
+},
+{
+  "model": "events.team",
+  "pk": 5,
+  "fields": {
+    "division": "2",
+    "event": 1,
+    "name": "Harry Otter and the Chamber of Seacrets",
+    "rank": 4,
+    "created_at": "2019-03-20T23:26:08.227Z",
+    "updated_at": "2019-03-20T23:26:08.227Z",
+    "members": [
+      13,
+      14,
+      15
+    ]
+  }
+},
+{
+  "model": "events.team",
+  "pk": 6,
+  "fields": {
+    "division": "2",
+    "event": 1,
+    "name": "Harry Otter and the Sea Lion's Stone",
+    "rank": 5,
+    "created_at": "2019-03-20T23:26:32.451Z",
+    "updated_at": "2019-03-20T23:26:32.451Z",
+    "members": [
+      16,
+      17,
+      18
+    ]
+  }
+},
+{
+  "model": "events.team",
+  "pk": 7,
+  "fields": {
+    "division": "2",
+    "event": 2,
+    "name": "Kelp Fiction",
+    "rank": 1,
+    "created_at": "2019-03-20T23:31:19.429Z",
+    "updated_at": "2019-03-20T23:31:19.429Z",
+    "members": [
+      6,
+      8,
+      19
+    ]
+  }
+},
+{
+  "model": "events.team",
+  "pk": 8,
+  "fields": {
+    "division": "2",
+    "event": 2,
+    "name": "My Neighbor Ottoro",
+    "rank": 2,
+    "created_at": "2019-03-20T23:31:53.534Z",
+    "updated_at": "2019-03-20T23:31:53.534Z",
+    "members": [
+      1,
+      20,
+      21
+    ]
+  }
+},
+{
+  "model": "events.team",
+  "pk": 9,
+  "fields": {
+    "division": "2",
+    "event": 2,
+    "name": "SuperLotter Plus",
+    "rank": 3,
+    "created_at": "2019-03-20T23:32:24.009Z",
+    "updated_at": "2019-03-20T23:32:24.009Z",
+    "members": [
+      22,
+      23,
+      24
+    ]
+  }
+},
+{
+  "model": "events.team",
+  "pk": 10,
+  "fields": {
+    "division": "2",
+    "event": 2,
+    "name": "Kelp31",
+    "rank": 4,
+    "created_at": "2019-03-20T23:32:52.217Z",
+    "updated_at": "2019-03-20T23:32:52.217Z",
+    "members": [
+      4,
+      25,
+      26
+    ]
+  }
+},
+{
+  "model": "events.team",
+  "pk": 11,
+  "fields": {
+    "division": "2",
+    "event": 2,
+    "name": "Globe Trotters",
+    "rank": 5,
+    "created_at": "2019-03-20T23:33:15.708Z",
+    "updated_at": "2019-03-20T23:33:15.708Z",
+    "members": [
+      5,
+      27,
+      28
+    ]
+  }
+},
+{
+  "model": "events.team",
+  "pk": 12,
+  "fields": {
+    "division": "2",
+    "event": 2,
+    "name": "Grand Theft Otter",
+    "rank": 6,
+    "created_at": "2019-03-20T23:34:05.401Z",
+    "updated_at": "2019-03-20T23:34:05.401Z",
+    "members": [
+      10,
+      11,
+      29
+    ]
+  }
+},
+{
+  "model": "events.team",
+  "pk": 13,
+  "fields": {
+    "division": "2",
+    "event": 2,
+    "name": "Anotter One",
+    "rank": 7,
+    "created_at": "2019-03-20T23:34:28.114Z",
+    "updated_at": "2019-03-20T23:34:28.114Z",
+    "members": [
+      2
+    ]
+  }
+}
+]
