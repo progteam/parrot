@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 
 import AboutPage from './about/about';
+import EventsPage from './events/events';
 import LandingPage from './landing/landing';
 import Page404 from './page404/page404';
 
@@ -18,6 +19,7 @@ const App = () => (
       <Switch>
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/about" component={AboutPage} />
+        <Route exact path="/events" component={EventsPage} />
         <Route component={Page404} />
       </Switch>
     </div>
