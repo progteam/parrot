@@ -26,6 +26,8 @@ urlpatterns = [
     path('about/', include('backend.about.urls')),
     path('events/', include('backend.events.urls')),
     path('admin/', admin.site.urls),
+
+    path('scoreboard/', include('backend.scoreboard.urls')),
 ]
 
 # Set our 404 error handler. Read more at
