@@ -16,7 +16,7 @@ def scores_week(request):
     for the past week.
     """
     week_ago = datetime.now(
-        tz=get_current_timezone()) - timedelta(days=7, tz=get_current_timezone())
+        tz=get_current_timezone()) - timedelta(days=7)
     query_result = KattisScore.objects.filter(
         created_at__gte=week_ago
     ).values('kattis_handle__handle').annotate(
