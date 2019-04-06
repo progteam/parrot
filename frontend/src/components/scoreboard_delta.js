@@ -11,22 +11,22 @@ class ScoreBoardDelta extends React.Component {
     this.state = {
       users: [
         {
-          name: 'Fernando Caudillo',
+          name: 'Donald',
           handle: 'javiercaudillo10',
           delta: 10,
         },
         {
-          name: 'Fernando Caudillo',
+          name: 'Fernando',
           handle: 'javiercaudillo10',
           delta: -1,
         },
         {
-          name: 'Fernando Caudillo',
+          name: 'Miorel',
           handle: 'javiercaudillo10',
           delta: 5,
         },
         {
-          name: 'Fernando Caudillo',
+          name: 'Emma',
           handle: 'javiercaudillo10',
           delta: 2,
         },

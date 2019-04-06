@@ -1,0 +1,57 @@
+@import '../colors';
+@import '../breakpoints';
+
+.teams {
+  display: flex;
+  flex-wrap: wrap;
+
+  .team {
+    padding: 10px;
+    width: 50%;
+
+    &-name {
+      font-size: 10px;
+      font-weight: bold;
+    }
+
+    &-rank {
+      display: inline;
+      font-size: 15px;
+      margin-right: 5px;
+    }
+  }
+
+  .division {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .scoreboard {
+    a {
+      color: $primary-color;
+      font-size: 10px;
+      font-weight: normal;
+
+      &:hover {
+        color: $logo-color;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.members {
+  a {
+    color: $primary-color;
+    display: block;
+    text-decoration: none;
+
+    &:hover {
+      color: $logo-color;
+      font-weight: bold;
+    }
+  }
+}

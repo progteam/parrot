@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import LandingPage from './landing';
 
 /*
@@ -9,6 +10,11 @@ import LandingPage from './landing';
 /* eslint-disable no-undef */
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<LandingPage />, div);
+  ReactDOM.render(
+    <Router>
+      <LandingPage />
+    </Router>,
+    div,
+  );
   ReactDOM.unmountComponentAtNode(div);
 });
