@@ -5,6 +5,7 @@ dumpdata="python manage.py dumpdata --indent 2"
 
 # backend
 $dumpdata auth.user > backend/fixtures/auth.user.json
+$dumpdata backend.academicterm > backend/fixtures/academicterm.json
 
 # backend/about
 $dumpdata about.progteamdesc > backend/about/fixtures/progteamdesc.json
