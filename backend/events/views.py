@@ -25,7 +25,10 @@ def encode_team(team):
     """
     return {
         'division': team.division,
-        'members': list(map(encode_member, team.members.all())),
+        'members': list(map(
+            encode_member,
+            team.members.all().order_by('name')
+        )),
         'name': team.name,
         'rank': team.rank,
     }
@@ -53,7 +56,7 @@ def encode_event(event):
         res['div1Scoreboard'] = event.div1_scoreboard
     if event.div2_scoreboard:
         res['div2Scoreboard'] = event.div2_scoreboard
-    teams = event.teams().all()
+    teams = event.teams().all().order_by('rank')
     if teams:
         res['teams'] = list(map(encode_team, teams))
     return res
@@ -62,5 +65,5 @@ def encode_event(event):
 def events_data(request):
     """Encode all events as a Json response
     """
-    events = map(encode_event, Event.objects.all())
+    events = map(encode_event, Event.objects.all().order_by('-date'))
     return JsonResponse(list(events), safe=False)
