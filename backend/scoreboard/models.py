@@ -15,7 +15,7 @@ class KattisHandle(models.Model):
     handle = models.CharField(max_length=50)
     subscribed = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     def add_score(self, score):
         """Add a score snapshot for the current Kattis handle
