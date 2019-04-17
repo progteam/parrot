@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import axios from 'axios';
 
 import GuestNav from '../components/guest_nav';
+import Loader from '../components/loader';
 import Teams from './teams';
 
 import './events.scss';
@@ -109,14 +110,19 @@ class EventsPage extends React.Component {
 
   render() {
     const { events } = this.state;
+    const content = events.length > 0 ? (
+      <div className="events">
+        {events.map(e => (
+          <Event key={e.name} {...e} />
+        ))}
+      </div>
+    ) : (
+      <Loader />
+    );
     return (
       <div className="events-page">
         <GuestNav />
-        <div className="events">
-          {events.map(e => (
-            <Event key={e.name} {...e} />
-          ))}
-        </div>
+        {content}
       </div>
     );
   }

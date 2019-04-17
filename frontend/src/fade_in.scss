@@ -1,0 +1,17 @@
+@keyframes fade-in-frames {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+%fade-in {
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+  animation-name: fade-in-frames;
+  animation-timing-function: ease-in;
+  opacity: 1;
+}
