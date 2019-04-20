@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import './user_delta.scss';
 
 const UserDelta = ({ points, maxDelta, username }) => {
-  const percentWidth = points / maxDelta;
+  const percentWidth = points / (maxDelta+3);
 
   const onDemandResize = {
-    width: 100 * percentWidth,
+    width: 100 * percentWidth + 2.5,
   };
   onDemandResize.width += '%';
 
@@ -21,7 +21,7 @@ const UserDelta = ({ points, maxDelta, username }) => {
         </strong>
       </div>
       <div className={classes} style={onDemandResize}>
-        {points}
+        {points.toFixed(1)}
       </div>
     </div>
   );
