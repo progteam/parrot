@@ -1,0 +1,27 @@
+@import '../colors';
+
+.user-bar {
+  display: flex;
+  height: 2em;
+  margin: .5em;
+
+  .user-name {
+    max-width: 20%;
+    min-width: 20%;
+
+    strong {
+      color: $primary-color;
+    }
+  }
+
+  .user-delta {
+    background-color: $logo-color;
+    border-radius: .5em;
+    color: $backgroud-color-light;
+    text-align: center;
+  }
+
+  .zero-delta {
+    color: $primary-color;
+  }
+}

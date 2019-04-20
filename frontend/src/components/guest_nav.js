@@ -11,6 +11,7 @@ const GuestNav = () => (
     <div className="links">
       <NavLink to="/about" activeClassName="active">About</NavLink>
       <NavLink to="/events" activeClassName="active">Events</NavLink>
+      <NavLink to="/scoreboard" activeClassName="active">Scoreboard</NavLink>
     </div>
   </div>
 );

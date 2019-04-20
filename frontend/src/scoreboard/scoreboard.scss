@@ -1,0 +1,12 @@
+@import '../guest_page';
+@import '../breakpoints';
+
+.scoreboard {
+  @extend %guest-page;
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
