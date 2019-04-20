@@ -9,7 +9,7 @@ import {
 import AboutPage from './about/about';
 import EventsPage from './events/events';
 import LandingPage from './landing/landing';
-import ScoreBoard from './scoreboard/scoreboard';
+import ScoreboardPage from './scoreboard/scoreboard';
 import Page404 from './page404/page404';
 
 import './index.scss';
@@ -21,7 +21,7 @@ const App = () => (
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/about" component={AboutPage} />
         <Route exact path="/events" component={EventsPage} />
-        <Route exact path="/scoreboard" component={ScoreBoard} />
+        <Route exact path="/scoreboard" component={ScoreboardPage} />
         <Route component={Page404} />
       </Switch>
     </div>

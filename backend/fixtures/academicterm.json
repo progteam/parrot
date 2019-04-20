@@ -1,1 +1,533 @@
 [
+{
+  "model": "backend.academicterm",
+  "pk": 1,
+  "fields": {
+    "term_name": "2017 Sum",
+    "start_date": "2017-06-05",
+    "end_date": "2017-07-28"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 2,
+  "fields": {
+    "term_name": "2017 Sum",
+    "start_date": "2017-06-05",
+    "end_date": "2017-08-19"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 3,
+  "fields": {
+    "term_name": "2017 Fall",
+    "start_date": "2017-08-23",
+    "end_date": "2017-12-15"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 4,
+  "fields": {
+    "term_name": "2018 Wtr",
+    "start_date": "2017-12-18",
+    "end_date": "2018-01-19"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 5,
+  "fields": {
+    "term_name": "2018 Spr",
+    "start_date": "2018-01-22",
+    "end_date": "2018-05-18"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 6,
+  "fields": {
+    "term_name": "2018 Sum",
+    "start_date": "2018-06-04",
+    "end_date": "2018-07-27"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 7,
+  "fields": {
+    "term_name": "2018 Sum",
+    "start_date": "2018-06-04",
+    "end_date": "2018-08-25"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 8,
+  "fields": {
+    "term_name": "2018 Fall",
+    "start_date": "2018-08-27",
+    "end_date": "2018-12-21"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 9,
+  "fields": {
+    "term_name": "2019 Wtr",
+    "start_date": "2019-01-02",
+    "end_date": "2019-01-18"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 10,
+  "fields": {
+    "term_name": "2019 Spr",
+    "start_date": "2019-01-22",
+    "end_date": "2019-05-17"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 11,
+  "fields": {
+    "term_name": "2019 Sum",
+    "start_date": "2019-06-03",
+    "end_date": "2019-08-23"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 12,
+  "fields": {
+    "term_name": "2019 Fall",
+    "start_date": "2019-08-26",
+    "end_date": "2019-12-20"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 13,
+  "fields": {
+    "term_name": "2020 Wtr",
+    "start_date": "2020-01-06",
+    "end_date": "2020-01-17"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 14,
+  "fields": {
+    "term_name": "2020 Wtr",
+    "start_date": "2020-01-06",
+    "end_date": "2020-01-17"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 15,
+  "fields": {
+    "term_name": "2020 Spr",
+    "start_date": "2020-01-21",
+    "end_date": "2020-05-15"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 16,
+  "fields": {
+    "term_name": "2020 Sum",
+    "start_date": "2020-06-01",
+    "end_date": "2020-07-24"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 17,
+  "fields": {
+    "term_name": "2020 Fall",
+    "start_date": "2020-08-24",
+    "end_date": "2020-12-18"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 18,
+  "fields": {
+    "term_name": "2021 Wtr",
+    "start_date": "2021-01-05",
+    "end_date": "2021-01-22"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 19,
+  "fields": {
+    "term_name": "2021 Spr",
+    "start_date": "2021-01-25",
+    "end_date": "2021-05-21"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 20,
+  "fields": {
+    "term_name": "2021 Sum",
+    "start_date": "2021-06-07",
+    "end_date": "2021-07-30"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 21,
+  "fields": {
+    "term_name": "2021 Fall",
+    "start_date": "2021-08-23",
+    "end_date": "2021-12-17"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 22,
+  "fields": {
+    "term_name": "2022 Wtr",
+    "start_date": "2022-01-03",
+    "end_date": "2022-01-21"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 23,
+  "fields": {
+    "term_name": "2022 Spr",
+    "start_date": "2022-01-24",
+    "end_date": "2022-05-20"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 24,
+  "fields": {
+    "term_name": "2022 Sum",
+    "start_date": "2022-06-06",
+    "end_date": "2022-07-29"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 25,
+  "fields": {
+    "term_name": "2022 Fall",
+    "start_date": "2022-08-22",
+    "end_date": "2022-12-16"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 26,
+  "fields": {
+    "term_name": "2023 Wtr",
+    "start_date": "2023-01-03",
+    "end_date": "2023-01-20"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 27,
+  "fields": {
+    "term_name": "2023 Spr",
+    "start_date": "2023-01-23",
+    "end_date": "2023-05-19"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 28,
+  "fields": {
+    "term_name": "2023 Sum",
+    "start_date": "2023-06-05",
+    "end_date": "2023-07-28"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 29,
+  "fields": {
+    "term_name": "2023 Fall",
+    "start_date": "2023-08-21",
+    "end_date": "2023-12-15"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 30,
+  "fields": {
+    "term_name": "2024 Wtr",
+    "start_date": "2024-01-02",
+    "end_date": "2024-01-19"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 31,
+  "fields": {
+    "term_name": "2024 Spr",
+    "start_date": "2024-01-22",
+    "end_date": "2024-05-17"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 32,
+  "fields": {
+    "term_name": "2024 Sum",
+    "start_date": "2024-06-03",
+    "end_date": "2024-07-26"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 33,
+  "fields": {
+    "term_name": "2024 Fall",
+    "start_date": "2024-08-26",
+    "end_date": "2024-12-20"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 34,
+  "fields": {
+    "term_name": "2025 Wtr",
+    "start_date": "2025-01-06",
+    "end_date": "2025-01-17"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 35,
+  "fields": {
+    "term_name": "2025 Spr",
+    "start_date": "2025-01-21",
+    "end_date": "2025-05-16"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 36,
+  "fields": {
+    "term_name": "2025 Sum",
+    "start_date": "2025-06-02",
+    "end_date": "2025-07-25"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 37,
+  "fields": {
+    "term_name": "2025 Fall",
+    "start_date": "2025-08-25",
+    "end_date": "2025-12-19"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 38,
+  "fields": {
+    "term_name": "2026 Wtr",
+    "start_date": "2026-01-05",
+    "end_date": "2026-01-16"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 39,
+  "fields": {
+    "term_name": "2026 Spr",
+    "start_date": "2026-01-20",
+    "end_date": "2026-05-15"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 40,
+  "fields": {
+    "term_name": "2026 Sum",
+    "start_date": "2026-06-01",
+    "end_date": "2026-07-24"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 41,
+  "fields": {
+    "term_name": "2026 Fall",
+    "start_date": "2026-08-24",
+    "end_date": "2026-12-18"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 42,
+  "fields": {
+    "term_name": "2027 Wtr",
+    "start_date": "2027-01-04",
+    "end_date": "2027-01-22"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 43,
+  "fields": {
+    "term_name": "2027 Spr",
+    "start_date": "2027-01-25",
+    "end_date": "2027-05-21"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 44,
+  "fields": {
+    "term_name": "2027 Sum",
+    "start_date": "2027-06-07",
+    "end_date": "2027-07-30"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 45,
+  "fields": {
+    "term_name": "2027 Fall",
+    "start_date": "2027-08-23",
+    "end_date": "2027-12-17"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 46,
+  "fields": {
+    "term_name": "2028 Wtr",
+    "start_date": "2028-01-03",
+    "end_date": "2028-01-21"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 47,
+  "fields": {
+    "term_name": "2028 Spr",
+    "start_date": "2028-01-24",
+    "end_date": "2028-05-19"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 48,
+  "fields": {
+    "term_name": "2028 Sum",
+    "start_date": "2028-06-05",
+    "end_date": "2028-07-28"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 49,
+  "fields": {
+    "term_name": "2028 Fall",
+    "start_date": "2028-08-21",
+    "end_date": "2028-12-15"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 50,
+  "fields": {
+    "term_name": "2029 Wtr",
+    "start_date": "2029-01-03",
+    "end_date": "2029-01-19"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 51,
+  "fields": {
+    "term_name": "2029 Spr",
+    "start_date": "2029-01-22",
+    "end_date": "2029-05-18"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 52,
+  "fields": {
+    "term_name": "2029 Sum",
+    "start_date": "2029-06-04",
+    "end_date": "2029-07-27"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 53,
+  "fields": {
+    "term_name": "2029 Fall",
+    "start_date": "2029-08-27",
+    "end_date": "2029-12-21"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 54,
+  "fields": {
+    "term_name": "2030 Wtr",
+    "start_date": "2030-01-02",
+    "end_date": "2030-01-18"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 55,
+  "fields": {
+    "term_name": "2030 Spr",
+    "start_date": "2030-01-22",
+    "end_date": "2030-05-17"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 56,
+  "fields": {
+    "term_name": "2030 Sum",
+    "start_date": "2030-06-03",
+    "end_date": "2030-07-26"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 57,
+  "fields": {
+    "term_name": "2030 Fall",
+    "start_date": "2030-08-26",
+    "end_date": "2030-12-20"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 58,
+  "fields": {
+    "term_name": "2031 Wtr",
+    "start_date": "2031-01-02",
+    "end_date": "2031-01-17"
+  }
+},
+{
+  "model": "backend.academicterm",
+  "pk": 59,
+  "fields": {
+    "term_name": "2031 Spr",
+    "start_date": "2031-01-21",
+    "end_date": "2031-05-16"
+  }
+}
+]
