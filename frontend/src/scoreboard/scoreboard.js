@@ -1,16 +1,16 @@
 import React from 'react';
 import GuestNav from '../components/guest_nav';
 import LandingFooter from '../landing/landing_footer';
-import ScoreBoardDelta from './scoreboard_delta';
+import ScoreboardDelta from './scoreboard_delta';
 
 import './scoreboard.scss';
 
-const ScoreBoard = () => (
+const ScoreboardPage = () => (
   <div className="scoreboard">
     <GuestNav />
 
     <div className="main">
-      <ScoreBoardDelta />
+      <ScoreboardDelta />
     </div>
 
     <LandingFooter />
@@ -18,4 +18,4 @@ const ScoreBoard = () => (
 );
 
 
-export default ScoreBoard;
+export default ScoreboardPage;

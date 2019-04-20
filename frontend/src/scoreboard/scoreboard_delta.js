@@ -5,7 +5,7 @@ import UserDelta from './user_delta';
 
 import './scoreboard_delta.scss';
 
-class ScoreBoardDelta extends React.Component {
+class ScoreboardDelta extends React.Component {
   constructor(props) {
     super(props);
 
@@ -43,17 +43,11 @@ class ScoreBoardDelta extends React.Component {
     // get max Delta of all users
     const maxDelta = users.reduce((a, b) => (a.points > b.points ? a : b), 0).points;
 
-    // convert any negatives to '0'
-    const usersZeroDelta = users.map((obj) => {
-      const temp = obj;
-      return temp;
-    });
-
     // sort props to promote being a top performer
-    usersZeroDelta.sort((a, b) => b.points - a.points);
+    users.sort((a, b) => b.points - a.points);
 
     // populate a list of UserDelta with props
-    const userInfo = usersZeroDelta.map(
+    const userInfo = users.map(
       obj => <UserDelta {...obj} key={obj.username} maxDelta={maxDelta} />,
     );
 
@@ -82,4 +76,4 @@ class ScoreBoardDelta extends React.Component {
   }
 }
 
-export default ScoreBoardDelta;
+export default ScoreboardDelta;
