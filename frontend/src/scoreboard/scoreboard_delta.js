@@ -61,7 +61,7 @@ class ScoreboardDelta extends React.Component {
       <div className="scoreboard-delta">
         <div className="scoreboard-delta-top-bar">
           <h2>
-			Kattis Points for
+            Kattis Points for
             {textTimeFrame()}
           </h2>
           <div>
