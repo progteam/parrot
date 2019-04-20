@@ -1,0 +1,36 @@
+@import '../colors';
+
+.form {
+  margin: 5em;
+
+  * {
+    margin: .5em;
+  }
+
+  label {
+    color: $primary-color;
+    font-size: 1.5em;
+  }
+
+  input {
+    border-radius: .35em;
+  }
+
+  button {
+    background-color: $backgroud-color-light;
+    border: solid $logo-color .5px;
+    border-radius: .35em;
+    color: $logo-color;
+
+    &:focus {
+      outline: 0;
+    }
+
+    &:hover {
+      background-color: $logo-color;
+      border: solid $backgroud-color-light .5px;
+      color: $backgroud-color-light;
+      opacity: .25;
+    }
+  }
+}

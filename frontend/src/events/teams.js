@@ -47,7 +47,7 @@ const Teams = ({
     <div className="teams">
       <div className="division">
         {division}
-        <div className="scoreboard">
+        <div className="scoreboard-link">
           <a
             href={scoreboard}
             rel="noopener noreferrer"

@@ -3,34 +3,34 @@ import PropTypes from 'prop-types';
 
 import './user_delta.scss';
 
-const UserDelta = ({ delta, maxDelta, name }) => {
-  const percentWidth = delta / maxDelta;
+const UserDelta = ({ points, maxDelta, username }) => {
+  const percentWidth = points / maxDelta;
 
   const onDemandResize = {
     width: 100 * percentWidth,
   };
   onDemandResize.width += '%';
 
-  const classes = `user_delta  ${percentWidth === 0 ? 'zero_delta' : ''}`;
+  const classes = `user-delta  ${percentWidth === 0 ? 'zero-delta' : ''}`;
 
   return (
-    <div className="user_bar">
-      <div className="user_name">
+    <div className="user-bar">
+      <div className="user-name">
         <strong>
-          {name}
+          {username}
         </strong>
       </div>
       <div className={classes} style={onDemandResize}>
-        {delta}
+        {points}
       </div>
     </div>
   );
 };
 
 UserDelta.propTypes = {
-  delta: PropTypes.number.isRequired,
+  points: PropTypes.number.isRequired,
   maxDelta: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
 };
 
 export default UserDelta;
