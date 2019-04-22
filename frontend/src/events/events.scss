@@ -1,11 +1,14 @@
 @import '../breakpoints';
 @import '../colors';
+@import '../fade_in';
 
 .events-page {
   display: flex;
   flex-direction: column;
 
   .event {
+    @extend %fade-in;
+
     @include breakpoint-tablet-down {
       flex-direction: column;
     }
